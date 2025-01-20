@@ -22,27 +22,40 @@
 # ⚙ 서비스 아키텍쳐
 ![image](https://github.com/user-attachments/assets/5f5937b1-31a6-4a44-9a9e-80f62fa23d6f)
 
+## ⭐ 주요 기능
+
+### - 메인 페이지
+![image](https://github.com/user-attachments/assets/092f2335-d88c-4461-a4ca-95d22b92ef88)
+![image](https://github.com/user-attachments/assets/23267e1e-5bae-4ef6-8004-ebadb2861c6f)
+
+
+### - 로그인/회원가입 페이지
+![image](https://github.com/user-attachments/assets/0f357669-f256-4a43-a574-ab8379b1b7a0)
+
+### - 마이 페이지
+![image](https://github.com/user-attachments/assets/e7cbcc7c-72de-48c8-b1eb-6e015eac47fc)
+| 내가 후원한 프로젝트 조회
+![image](https://github.com/user-attachments/assets/60e708d7-b19b-48f4-936e-f015dbf49ec7)
+| 나의 프로젝트 조회
+![image](https://github.com/user-attachments/assets/9c50d2b6-7b0f-4f5e-be80-6855a557444a)
+| 관심 프로젝트 조회
+### - 프로젝트 등록 페이지
+![image](https://github.com/user-attachments/assets/8a8d60a7-4f0c-49c2-8f88-05ec04feabb8)
+![image](https://github.com/user-attachments/assets/261a0b5f-a3c2-43cf-b523-9ce6ef910f35)
+![image](https://github.com/user-attachments/assets/53ddd7f7-780a-479d-bb9e-8458bd0480e5)
+### - 협업 하기 모달
+![image](https://github.com/user-attachments/assets/067b0e02-3da2-49e0-8bc9-5f2547bbf37b)
+### - 주문 결제 페이지
+![image](https://github.com/user-attachments/assets/ad7b171b-2e3a-4383-9576-5d0ff17747ff)
+![image](https://github.com/user-attachments/assets/927b9ed9-e0e0-4700-825a-749b914c4a6c)
+![image](https://github.com/user-attachments/assets/1bf79da2-4bdd-46e8-a755-940c7fa7eca6)
+### - 생성형 AI / 추천 시스템
+![image](https://github.com/user-attachments/assets/dd7444f6-2192-435d-a0e4-fed43f38498d)
+![image](https://github.com/user-attachments/assets/77c489e6-9abe-452a-9b7c-bc3572bb903a)
+
+
 # 📔 폴더 구조
 ```plaintext
-+---.idea
-|       .gitignore
-|       gradle.xml
-|       misc.xml
-|       vcs.xml
-|       workspace.xml
-|       
-+---docs
-|       DATABASE_SETTING.md
-|       DBeaver_create_database.png
-|       README.md
-|       
-+---gradle
-|   \---wrapper
-|           gradle-wrapper.jar
-|           gradle-wrapper.properties
-|           
-\---src
-    +---main
     |   +---java
     |   |   \---org
     |   |       \---eightbit
@@ -321,44 +334,6 @@
     |               project_tag.sql
     |               project_update.sql
     |               tags.sql
-    |               
-    \---test
-        \---java
-            \---org
-                \---eightbit
-                    \---damdda
-                            DamDdaApplicationTests.java
+    
 ```
-                            
-## ⭐ 주요 기능
-
-### - 메인 페이지
-![image](https://github.com/user-attachments/assets/165d8e20-a66e-47db-9c66-1aac95f22ef4)
-
-### - 로그인/회원가입 페이지
-![image](https://github.com/user-attachments/assets/0f357669-f256-4a43-a574-ab8379b1b7a0)
-
-### - 마이 페이지
-![image](https://github.com/user-attachments/assets/e7cbcc7c-72de-48c8-b1eb-6e015eac47fc)
-내가 후원한 프로젝트 조회
-![image](https://github.com/user-attachments/assets/60e708d7-b19b-48f4-936e-f015dbf49ec7)
-나의 프로젝트
-![image](https://github.com/user-attachments/assets/9c50d2b6-7b0f-4f5e-be80-6855a557444a)
-관심 프로젝트 조회
-### - 프로젝트 등록 페이지
-![image](https://github.com/user-attachments/assets/8a8d60a7-4f0c-49c2-8f88-05ec04feabb8)
-![image](https://github.com/user-attachments/assets/261a0b5f-a3c2-43cf-b523-9ce6ef910f35)
-![image](https://github.com/user-attachments/assets/53ddd7f7-780a-479d-bb9e-8458bd0480e5)
-### - 협업 하기 모달
-![image](https://github.com/user-attachments/assets/067b0e02-3da2-49e0-8bc9-5f2547bbf37b)
-### - 주문 결제 페이지
-![image](https://github.com/user-attachments/assets/ad7b171b-2e3a-4383-9576-5d0ff17747ff)
-![image](https://github.com/user-attachments/assets/927b9ed9-e0e0-4700-825a-749b914c4a6c)
-![image](https://github.com/user-attachments/assets/1bf79da2-4bdd-46e8-a755-940c7fa7eca6)
-### - 생성형 AI / 추천 시스템
-![image](https://github.com/user-attachments/assets/dd7444f6-2192-435d-a0e4-fed43f38498d)
-![image](https://github.com/user-attachments/assets/77c489e6-9abe-452a-9b7c-bc3572bb903a)
-
-
-
-
+                    
