@@ -56,284 +56,284 @@
 
 # 📔 폴더 구조
 ```plaintext
-    |   +---java
-    |   |   \---org
-    |   |       \---eightbit
-    |   |           \---damdda
-    |   |               |   DamDdaApplication.java
-    |   |               |   
-    |   |               +---admin
-    |   |               |   +---domain
-    |   |               |   |       Admin.java
-    |   |               |   |       AdminApproval.java
-    |   |               |   |       CarouselImage.java
-    |   |               |   |       
-    |   |               |   +---repository
-    |   |               |   |       AdminApprovalRepository.java
-    |   |               |   |       
-    |   |               |   \---service
-    |   |               |           AdminApprovalService.java
-    |   |               |           AdminApprovalServiceImpl.java
-    |   |               |           
-    |   |               +---common
-    |   |               |   +---config
-    |   |               |   |       ModelMapperConfig.java
-    |   |               |   |       S3ClientConfig.java
-    |   |               |   |       
-    |   |               |   +---exception
-    |   |               |   |   +---custom
-    |   |               |   |   |       UnauthorizedAccessException.java
-    |   |               |   |   |       
-    |   |               |   |   \---handler
-    |   |               |   |           GlobalExceptionHandler.java
-    |   |               |   |           
-    |   |               |   \---utils
-    |   |               |       +---cloud
-    |   |               |       |       S3Util.java
-    |   |               |       |       
-    |   |               |       +---file
-    |   |               |       |       ExcelGenerator.java
-    |   |               |       |       
-    |   |               |       +---logging
-    |   |               |       |       LoggingAspect.java
-    |   |               |       |       
-    |   |               |       \---validation
-    |   |               |               CreateValidation.java
-    |   |               |               MemberValidator.java
-    |   |               |               ProjectValidator.java
-    |   |               |               UpdateValidation.java
-    |   |               |               
-    |   |               +---generativeai
-    |   |               |   +---client
-    |   |               |   |       AIContentGenerationClient.java
-    |   |               |   |       
-    |   |               |   +---config
-    |   |               |   |       AIWebClientConfig.java
-    |   |               |   |       
-    |   |               |   +---controller
-    |   |               |   |       GenerativeAIController.java
-    |   |               |   |       
-    |   |               |   +---dto
-    |   |               |   |       AIProjectDescriptionDTO.java
-    |   |               |   |       
-    |   |               |   \---service
-    |   |               |           GenerativeAIService.java
-    |   |               |           GenerativeAIServiceImpl.java
-    |   |               |           
-    |   |               +---member
-    |   |               |   +---controller
-    |   |               |   |       MemberController.java
-    |   |               |   |       
-    |   |               |   +---domain
-    |   |               |   |       Member.java
-    |   |               |   |       
-    |   |               |   +---dto
-    |   |               |   |       MemberDTO.java
-    |   |               |   |       MemberSearchDTO.java
-    |   |               |   |       PasswordDTO.java
-    |   |               |   |       RegisterDTO.java
-    |   |               |   |       
-    |   |               |   +---repository
-    |   |               |   |       LoginRepository.java
-    |   |               |   |       MemberRepository.java
-    |   |               |   |       RegisterRepository.java
-    |   |               |   |       
-    |   |               |   \---service
-    |   |               |           LoginService.java
-    |   |               |           LoginServiceImpl.java
-    |   |               |           MemberService.java
-    |   |               |           MemberServiceImpl.java
-    |   |               |           RegisterService.java
-    |   |               |           RegisterServiceImpl.java
-    |   |               |           
-    |   |               +---noticeandqna
-    |   |               |   +---controller
-    |   |               |   |       NoticeController.java
-    |   |               |   |       QnaQuestionController.java
-    |   |               |   |       QnaReplyController.java
-    |   |               |   |       
-    |   |               |   +---domain
-    |   |               |   |       Notice.java
-    |   |               |   |       QnaQuestion.java
-    |   |               |   |       QnaReply.java
-    |   |               |   |       
-    |   |               |   +---dto
-    |   |               |   |       BaseDTO.java
-    |   |               |   |       NoticeDTO.java
-    |   |               |   |       QnaQuestionDTO.java
-    |   |               |   |       QnaReplyDTO.java
-    |   |               |   |       
-    |   |               |   +---repository
-    |   |               |   |       NoticeRepository.java
-    |   |               |   |       QnaQuestionRepository.java
-    |   |               |   |       QnaReplyRepository.java
-    |   |               |   |       
-    |   |               |   \---service
-    |   |               |           NoticeService.java
-    |   |               |           NoticeServiceImpl.java
-    |   |               |           QnaQuestionService.java
-    |   |               |           QnaQuestionServiceImpl.java
-    |   |               |           QnaReplyService.java
-    |   |               |           QnaReplyServiceImpl.java
-    |   |               |           
-    |   |               +---order
-    |   |               |   +---controller
-    |   |               |   |       OrderController.java
-    |   |               |   |       PaymentController.java
-    |   |               |   |       
-    |   |               |   +---domain
-    |   |               |   |       Delivery.java
-    |   |               |   |       KakaoPayInterface.java
-    |   |               |   |       Order.java
-    |   |               |   |       Payment.java
-    |   |               |   |       SupportingPackage.java
-    |   |               |   |       SupportingProject.java
-    |   |               |   |       
-    |   |               |   +---dto
-    |   |               |   |       Amount.java
-    |   |               |   |       ApprovedCancelAmount.java
-    |   |               |   |       CancelAvailableAmount.java
-    |   |               |   |       CanceledAmount.java
-    |   |               |   |       KakaoApproveResponse.java
-    |   |               |   |       KakaoCancelResponse.java
-    |   |               |   |       KakaoReadyResponse.java
-    |   |               |   |       OrderDTO.java
-    |   |               |   |       PaymentPackageDTO.java
-    |   |               |   |       PaymentRewardDTO.java
-    |   |               |   |       ProjectStatisticsDTO.java
-    |   |               |   |       SupportingProjectDTO.java
-    |   |               |   |       TossRequest.java
-    |   |               |   |       TossResponse.java
-    |   |               |   |       
-    |   |               |   +---repository
-    |   |               |   |       DeliveryRepository.java
-    |   |               |   |       OrderRepository.java
-    |   |               |   |       PaymentRepository.java
-    |   |               |   |       SupportingPackageRepository.java
-    |   |               |   |       SupportingProjectRepository.java
-    |   |               |   |       
-    |   |               |   \---service
-    |   |               |           KakaoPayService.java
-    |   |               |           KakaoPayServiceImpl.java
-    |   |               |           OrderService.java
-    |   |               |           OrderServiceImpl.java
-    |   |               |           SupportingProjectService.java
-    |   |               |           SupportingProjectServiceImpl.java
-    |   |               |           TossPayService.java
-    |   |               |           TossPayServiceImpl.java
-    |   |               |           
-    |   |               +---project
-    |   |               |   +---controller
-    |   |               |   |       CollaborationController.java
-    |   |               |   |       FileApiController.java
-    |   |               |   |       PackageController.java
-    |   |               |   |       ProjectController.java
-    |   |               |   |       
-    |   |               |   +---domain
-    |   |               |   |       Category.java
-    |   |               |   |       Collaboration.java
-    |   |               |   |       LikedProject.java
-    |   |               |   |       PackageRewards.java
-    |   |               |   |       Project.java
-    |   |               |   |       ProjectDocument.java
-    |   |               |   |       ProjectImage.java
-    |   |               |   |       ProjectImageType.java
-    |   |               |   |       ProjectPackage.java
-    |   |               |   |       ProjectRewards.java
-    |   |               |   |       Tag.java
-    |   |               |   |       
-    |   |               |   +---dto
-    |   |               |   |       CollaborationDetailDTO.java
-    |   |               |   |       CollaborationDTO.java
-    |   |               |   |       DailySupporting.java
-    |   |               |   |       FileDTO.java
-    |   |               |   |       MetaDTO.java
-    |   |               |   |       PackageDTO.java
-    |   |               |   |       PageRequestDTO.java
-    |   |               |   |       PageResponseDTO.java
-    |   |               |   |       ProjectBoxDTO.java
-    |   |               |   |       ProjectBoxHostDTO.java
-    |   |               |   |       ProjectDetailDTO.java
-    |   |               |   |       ProjectDetailHostDTO.java
-    |   |               |   |       ProjectRegisterDetailDTO.java
-    |   |               |   |       ProjectResponseDetailDTO.java
-    |   |               |   |       RewardDTO.java
-    |   |               |   |       TagDTO.java
-    |   |               |   |       WritingProjectDTO.java
-    |   |               |   |       
-    |   |               |   +---repository
-    |   |               |   |       CategoryRepository.java
-    |   |               |   |       CollaborationRepository.java
-    |   |               |   |       LikedProjectRepository.java
-    |   |               |   |       PackageRepository.java
-    |   |               |   |       PackageRewardsRepository.java
-    |   |               |   |       ProjectDocumentRepository.java
-    |   |               |   |       ProjectImageRepository.java
-    |   |               |   |       ProjectImageTypeRepository.java
-    |   |               |   |       ProjectRepository.java
-    |   |               |   |       ProjectRepositoryCustom.java
-    |   |               |   |       ProjectRepositoryImpl.java
-    |   |               |   |       RewardRepository.java
-    |   |               |   |       TagRepository.java
-    |   |               |   |       
-    |   |               |   \---service
-    |   |               |           CollaborationService.java
-    |   |               |           CollaborationServiceImpl.java
-    |   |               |           DocService.java
-    |   |               |           DocServiceImpl.java
-    |   |               |           ImgService.java
-    |   |               |           ImgServiceImpl.java
-    |   |               |           LikedProjectService.java
-    |   |               |           LikedProjectServiceImpl.java
-    |   |               |           PackageService.java
-    |   |               |           PackageServiceImpl.java
-    |   |               |           ProjectService.java
-    |   |               |           ProjectServiceImpl.java
-    |   |               |           TagService.java
-    |   |               |           TagServiceImpl.java
-    |   |               |           
-    |   |               \---security
-    |   |                   +---config
-    |   |                   |       SecurityConfig.java
-    |   |                   |       
-    |   |                   +---filter
-    |   |                   |       JwtAuthenticationFilter.java
-    |   |                   |       LoginFilter.java
-    |   |                   |       
-    |   |                   +---jwt
-    |   |                   |       AuthEntryPoint.java
-    |   |                   |       JwtService.java
-    |   |                   |       
-    |   |                   +---user
-    |   |                   |       AccountCredentials.java
-    |   |                   |       User.java
-    |   |                   |       UserDetailsServiceImpl.java
-    |   |                   |       
-    |   |                   \---util
-    |   |                           SecurityContextUtil.java
-    |   |                           
-    |   \---resources
-    |       |   application.properties
-    |       |   external-credentials.properties
-    |       |   
-    |       \---data
-    |               approval.sql
-    |               categories.sql
-    |               collaboration.sql
-    |               deliveries.sql
-    |               liked_projects.sql
-    |               members.sql
-    |               notices.sql
-    |               orders.sql
-    |               package.sql
-    |               payments.sql
-    |               projects.sql
-    |               project_documents.sql
-    |               project_images.sql
-    |               project_image_type.sql
-    |               project_tag.sql
-    |               project_update.sql
-    |               tags.sql
+ +---java
+    |   \---org
+    |       \---eightbit
+    |           \---damdda
+    |               |   DamDdaApplication.java
+    |               |   
+    |               +---admin
+    |               |   +---domain
+    |               |   |       Admin.java
+    |               |   |       AdminApproval.java
+    |               |   |       CarouselImage.java
+    |               |   |       
+    |               |   +---repository
+    |               |   |       AdminApprovalRepository.java
+    |               |   |       
+    |               |   \---service
+    |               |           AdminApprovalService.java
+    |               |           AdminApprovalServiceImpl.java
+    |               |           
+    |               +---common
+    |               |   +---config
+    |               |   |       ModelMapperConfig.java
+    |               |   |       S3ClientConfig.java
+    |               |   |       
+    |               |   +---exception
+    |               |   |   +---custom
+    |               |   |   |       UnauthorizedAccessException.java
+    |               |   |   |       
+    |               |   |   \---handler
+    |               |   |           GlobalExceptionHandler.java
+    |               |   |           
+    |               |   \---utils
+    |               |       +---cloud
+    |               |       |       S3Util.java
+    |               |       |       
+    |               |       +---file
+    |               |       |       ExcelGenerator.java
+    |               |       |       
+    |               |       +---logging
+    |               |       |       LoggingAspect.java
+    |               |       |       
+    |               |       \---validation
+    |               |               CreateValidation.java
+    |               |               MemberValidator.java
+    |               |               ProjectValidator.java
+    |               |               UpdateValidation.java
+    |               |               
+    |               +---generativeai
+    |               |   +---client
+    |               |   |       AIContentGenerationClient.java
+    |               |   |       
+    |               |   +---config
+    |               |   |       AIWebClientConfig.java
+    |               |   |       
+    |               |   +---controller
+    |               |   |       GenerativeAIController.java
+    |               |   |       
+    |               |   +---dto
+    |               |   |       AIProjectDescriptionDTO.java
+    |               |   |       
+    |               |   \---service
+    |               |           GenerativeAIService.java
+    |               |           GenerativeAIServiceImpl.java
+    |               |           
+    |               +---member
+    |               |   +---controller
+    |               |   |       MemberController.java
+    |               |   |       
+    |               |   +---domain
+    |               |   |       Member.java
+    |               |   |       
+    |               |   +---dto
+    |               |   |       MemberDTO.java
+    |               |   |       MemberSearchDTO.java
+    |               |   |       PasswordDTO.java
+    |               |   |       RegisterDTO.java
+    |               |   |       
+    |               |   +---repository
+    |               |   |       LoginRepository.java
+    |               |   |       MemberRepository.java
+    |               |   |       RegisterRepository.java
+    |               |   |       
+    |               |   \---service
+    |               |           LoginService.java
+    |               |           LoginServiceImpl.java
+    |               |           MemberService.java
+    |               |           MemberServiceImpl.java
+    |               |           RegisterService.java
+    |               |           RegisterServiceImpl.java
+    |               |           
+    |               +---noticeandqna
+    |               |   +---controller
+    |               |   |       NoticeController.java
+    |               |   |       QnaQuestionController.java
+    |               |   |       QnaReplyController.java
+    |               |   |       
+    |               |   +---domain
+    |               |   |       Notice.java
+    |               |   |       QnaQuestion.java
+    |               |   |       QnaReply.java
+    |               |   |       
+    |               |   +---dto
+    |               |   |       BaseDTO.java
+    |               |   |       NoticeDTO.java
+    |               |   |       QnaQuestionDTO.java
+    |               |   |       QnaReplyDTO.java
+    |               |   |       
+    |               |   +---repository
+    |               |   |       NoticeRepository.java
+    |               |   |       QnaQuestionRepository.java
+    |               |   |       QnaReplyRepository.java
+    |               |   |       
+    |               |   \---service
+    |               |           NoticeService.java
+    |               |           NoticeServiceImpl.java
+    |               |           QnaQuestionService.java
+    |               |           QnaQuestionServiceImpl.java
+    |               |           QnaReplyService.java
+    |               |           QnaReplyServiceImpl.java
+    |               |           
+    |               +---order
+    |               |   +---controller
+    |               |   |       OrderController.java
+    |               |   |       PaymentController.java
+    |               |   |       
+    |               |   +---domain
+    |               |   |       Delivery.java
+    |               |   |       KakaoPayInterface.java
+    |               |   |       Order.java
+    |               |   |       Payment.java
+    |               |   |       SupportingPackage.java
+    |               |   |       SupportingProject.java
+    |               |   |       
+    |               |   +---dto
+    |               |   |       Amount.java
+    |               |   |       ApprovedCancelAmount.java
+    |               |   |       CancelAvailableAmount.java
+    |               |   |       CanceledAmount.java
+    |               |   |       KakaoApproveResponse.java
+    |               |   |       KakaoCancelResponse.java
+    |               |   |       KakaoReadyResponse.java
+    |               |   |       OrderDTO.java
+    |               |   |       PaymentPackageDTO.java
+    |               |   |       PaymentRewardDTO.java
+    |               |   |       ProjectStatisticsDTO.java
+    |               |   |       SupportingProjectDTO.java
+    |               |   |       TossRequest.java
+    |               |   |       TossResponse.java
+    |               |   |       
+    |               |   +---repository
+    |               |   |       DeliveryRepository.java
+    |               |   |       OrderRepository.java
+    |               |   |       PaymentRepository.java
+    |               |   |       SupportingPackageRepository.java
+    |               |   |       SupportingProjectRepository.java
+    |               |   |       
+    |               |   \---service
+    |               |           KakaoPayService.java
+    |               |           KakaoPayServiceImpl.java
+    |               |           OrderService.java
+    |               |           OrderServiceImpl.java
+    |               |           SupportingProjectService.java
+    |               |           SupportingProjectServiceImpl.java
+    |               |           TossPayService.java
+    |               |           TossPayServiceImpl.java
+    |               |           
+    |               +---project
+    |               |   +---controller
+    |               |   |       CollaborationController.java
+    |               |   |       FileApiController.java
+    |               |   |       PackageController.java
+    |               |   |       ProjectController.java
+    |               |   |       
+    |               |   +---domain
+    |               |   |       Category.java
+    |               |   |       Collaboration.java
+    |               |   |       LikedProject.java
+    |               |   |       PackageRewards.java
+    |               |   |       Project.java
+    |               |   |       ProjectDocument.java
+    |               |   |       ProjectImage.java
+    |               |   |       ProjectImageType.java
+    |               |   |       ProjectPackage.java
+    |               |   |       ProjectRewards.java
+    |               |   |       Tag.java
+    |               |   |       
+    |               |   +---dto
+    |               |   |       CollaborationDetailDTO.java
+    |               |   |       CollaborationDTO.java
+    |               |   |       DailySupporting.java
+    |               |   |       FileDTO.java
+    |               |   |       MetaDTO.java
+    |               |   |       PackageDTO.java
+    |               |   |       PageRequestDTO.java
+    |               |   |       PageResponseDTO.java
+    |               |   |       ProjectBoxDTO.java
+    |               |   |       ProjectBoxHostDTO.java
+    |               |   |       ProjectDetailDTO.java
+    |               |   |       ProjectDetailHostDTO.java
+    |               |   |       ProjectRegisterDetailDTO.java
+    |               |   |       ProjectResponseDetailDTO.java
+    |               |   |       RewardDTO.java
+    |               |   |       TagDTO.java
+    |               |   |       WritingProjectDTO.java
+    |               |   |       
+    |               |   +---repository
+    |               |   |       CategoryRepository.java
+    |               |   |       CollaborationRepository.java
+    |               |   |       LikedProjectRepository.java
+    |               |   |       PackageRepository.java
+    |               |   |       PackageRewardsRepository.java
+    |               |   |       ProjectDocumentRepository.java
+    |               |   |       ProjectImageRepository.java
+    |               |   |       ProjectImageTypeRepository.java
+    |               |   |       ProjectRepository.java
+    |               |   |       ProjectRepositoryCustom.java
+    |               |   |       ProjectRepositoryImpl.java
+    |               |   |       RewardRepository.java
+    |               |   |       TagRepository.java
+    |               |   |       
+    |               |   \---service
+    |               |           CollaborationService.java
+    |               |           CollaborationServiceImpl.java
+    |               |           DocService.java
+    |               |           DocServiceImpl.java
+    |               |           ImgService.java
+    |               |           ImgServiceImpl.java
+    |               |           LikedProjectService.java
+    |               |           LikedProjectServiceImpl.java
+    |               |           PackageService.java
+    |               |           PackageServiceImpl.java
+    |               |           ProjectService.java
+    |               |           ProjectServiceImpl.java
+    |               |           TagService.java
+    |               |           TagServiceImpl.java
+    |               |           
+    |               \---security
+    |                   +---config
+    |                   |       SecurityConfig.java
+    |                   |       
+    |                   +---filter
+    |                   |       JwtAuthenticationFilter.java
+    |                   |       LoginFilter.java
+    |                   |       
+    |                   +---jwt
+    |                   |       AuthEntryPoint.java
+    |                   |       JwtService.java
+    |                   |       
+    |                   +---user
+    |                   |       AccountCredentials.java
+    |                   |       User.java
+    |                   |       UserDetailsServiceImpl.java
+    |                   |       
+    |                   \---util
+    |                           SecurityContextUtil.java
+    |                           
+    \---resources
+        |   application.properties
+        |   external-credentials.properties
+        |   
+        \---data
+                approval.sql
+                categories.sql
+                collaboration.sql
+                deliveries.sql
+                liked_projects.sql
+                members.sql
+                notices.sql
+                orders.sql
+                package.sql
+                payments.sql
+                projects.sql
+                project_documents.sql
+                project_images.sql
+                project_image_type.sql
+                project_tag.sql
+                project_update.sql
+                tags.sql
     
 ```
                     
